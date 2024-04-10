@@ -2,7 +2,7 @@ import { io } from 'socket.io-client'
 import {SOCKET_PORT} from "./config";
 
 const logger = (args: string) => {
-    console.log('Atlas mock:: ', args, '\n')
+    console.log('Atlas mock:: ', args)
 }
 
 // Atlas started
@@ -18,7 +18,7 @@ socket.emit('join-room', {
 // and either update cache on given video ID with partial entity data
 // or refetch the data through GraphQL
 socket.on('video-updated', payload => {
-    logger(`Receive video-updated event with payload, ${JSON.stringify(payload)}`)
+    logger(`Received video-updated event with payload, ${JSON.stringify(payload)}`)
 
 
     // This will be emitted when user leaves the page to avoid

@@ -2,7 +2,7 @@ import { io } from 'socket.io-client'
 import {PROCESSOR_SECRET, SOCKET_PORT} from "./config";
 
 const logger = (args: string) => {
-    console.log('Processor mock:: ', args, '\n')
+    console.log('Processor mock:: ', args)
 }
 
 const socket = io(`http://localhost:${SOCKET_PORT}/processor`, {

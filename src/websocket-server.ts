@@ -4,7 +4,7 @@ import {Server} from "socket.io";
 import {PROCESSOR_SECRET, SOCKET_PORT} from './config'
 
 const logger = (args: string) => {
-    console.log('Websocket server:: ', args, '\n')
+    console.log('Websocket server:: ', args)
 }
 
 const app = express()
